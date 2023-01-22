@@ -50,33 +50,6 @@ int Min(int[] arr)
     return min;
 }
 
-// static void GetSum(int[] arr)
-// {
-//     int max = 0;
-//     int min = 0;
-//     int result = max - min;
-//     for (int i = 1; i < arr.Length; i++)
-//     {
-//         if (arr[i] > max)
-//         {
-//             max = arr[i];
-//         }
-//         if (arr[i] < min) min = arr[i];
-//         {
-//             min = arr[i];
-//         }
-//     }
-// Console.WriteLine ($"{result}");
-
-// }
-// //     }
-// //     if (min > 0 && max > 0)
-// //     {
-// //         result = max - min;
-// //     }
-// //     return result;
-// // }
-
 int[] array = CreateArrayRndInt(3, -1, 5);
 PrintArray(array);
 int max = Max(array);
