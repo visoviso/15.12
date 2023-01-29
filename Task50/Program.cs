@@ -13,7 +13,7 @@ Console.Write("введите 2-ю позицию элемента в двухм
 int b = Convert.ToInt32(Console.ReadLine());
 int[,] matrix = new int[3, 4];
 
-int[,] CreateMatrixRndInt(int min, int max)
+void CreateMatrixRndInt(int[,] array)
 {
     Random rnd = new Random();
 
@@ -21,10 +21,10 @@ int[,] CreateMatrixRndInt(int min, int max)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = rnd.Next(min, max + 1);
+            matrix[i, j] = rnd.Next(10,20);
         }
     }
-    return matrix;
+   
 }
 
 void PrintMatrix(int[,] matrix)
@@ -39,7 +39,10 @@ void PrintMatrix(int[,] matrix)
         }
         Console.WriteLine("]");
     }
+    
 }
+CreateMatrixRndInt(matrix);
+PrintMatrix(matrix);
 
         if (a < matrix.GetLength(0) && b < matrix.GetLength(1))
         {
@@ -49,8 +52,5 @@ void PrintMatrix(int[,] matrix)
         {
             Console.WriteLine($" такого элемента нет в массиве");
         }
-
-    int[,] array = CreateMatrixRndInt(10, 20);
-    Console.WriteLine();
-    PrintMatrix(matrix);
+ 
 
