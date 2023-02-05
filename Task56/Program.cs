@@ -40,7 +40,7 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine("]");
     }
 }
-void MinSumRow(int[,] array)
+void SumLine(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -54,8 +54,22 @@ void MinSumRow(int[,] array)
         Console.WriteLine($"{rowSum}");
     }
 }
+void MinSumLine(int[,] array)
+{
+    int minline = 0;
+
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        if (array[minline, 0] >= array[i, 0]) minline = i;
+    }
+    Console.WriteLine($" {minline+1}");
+}
 int[,] matrix = CreateMatrixRndInt(3, 4, 10, 20);
 PrintMatrix(matrix);
 Console.WriteLine("сумма элементов в строке: ");
-MinSumRow(matrix);
+SumLine(matrix);
+Console.WriteLine("строка с минимальной суммой элиментов: ");
+MinSumLine(matrix);
+
+
 
