@@ -12,11 +12,10 @@ NaturalNumbers(number);
 void NaturalNumbers(int num)
 
 {
-if (num > 0)
-{
-    Console.Write("{0} ", num);
-     NaturalNumbers(num - 1);
-     }
-}
+       if (num == 0) return;
+        Console.Write("{0} ", num);
+        NaturalNumbers(num - 1);
+    
 
+}
 
