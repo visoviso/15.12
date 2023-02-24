@@ -39,7 +39,7 @@ void PrintMatrix(int[,] matrix)
 
 int[,] BubbleSort(int[,] newArray)
 {
-    int temp;
+    int temp=0;
 
     for (int i = 0; i < newArray.GetLength(0); i++)
     {
@@ -62,7 +62,7 @@ int[,] BubbleSort(int[,] newArray)
 
 int[,] matrix = CreateMatrixRndInt(3, 4, 10, 20);
 PrintMatrix(matrix);
-Console.WriteLine("Сортировка элементов в строках от большего к меньгему': ");
+Console.WriteLine("Сортировка элементов в строках от большего к меньшему: ");
 int[,] newArray = BubbleSort(matrix);
 PrintMatrix(newArray);
 
